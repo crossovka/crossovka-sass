@@ -1,0 +1,54 @@
+/*  ---------------------------------------  */
+
+// шрифт с google fonts
+
+/*  -------------------  */
+
+// обнуление
+@import "null.scss";
+
+// переменные и переиспользование по bem
+@import "vars.scss";
+
+// ограничивающие контейнеры
+@import "containers.scss";
+
+/*  -------- блоки на сайте --------------  */
+
+@import "./blocks/header.scss";
+
+@import "./blocks/intro.scss";
+
+@import "./blocks/products.scss";
+
+/*  --------                --------------  */
+
+html,
+body {
+	height: 100%;
+
+	font-family: $font-family;
+	font-size: 18px;
+	color: $primary-f-color;
+
+	background-color: $main-bgc-color;
+	// background-color: #ffffff;
+
+	// для того, чтобы когда модальное окно открывалось у боди не было скрола когда буду вызывать модальное боди буду выдаватьь этот класс
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+.wpapper {
+	min-height: 100vh;
+
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	// overflow-x: hidden;
+}
+main {
+	flex: 1 1 auto;
+	// прижал footer у низу
+}

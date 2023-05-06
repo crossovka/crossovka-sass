@@ -1,0 +1,126 @@
+// screen sizes ---------------
+$maxWidth: 1606;
+
+
+// z-index --------------------
+$ui-index-1: 1;	//для наползающих элементов в потоке
+$ui-index-2: 2;	//для наползающих элементов в потоке
+$ui-index-3: 3;	//для масок
+$ui-index-4: 4;	//для сайдбаров
+$ui-index-5: 5; //для модалок
+$ui-index-6: 6;	//дял элементов, перекрывающих все
+
+
+// FONTS ----------------------
+// шрифт с google fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+// font-family
+$font-family: "Roboto", sans-serif;
+
+// font weight
+$regular-weight: 400;
+$medium-weight: 500;
+$bold-weight: 700;
+$extra-bold-weight: 900;
+
+//font colors
+$primary-f-color: #000;
+$alt-f-color: #fff;
+$alt-f-hover-color:  #fff;
+
+$secondary-f-color: #950101;
+$secondary-f-hover-color: #ff0000;
+$secondary-f-active-color: #ff0000;
+
+$optional-f-color: #c4c4c4;
+$optional-f-hover-color: #495057;
+$optional-f-active-color: #495057;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addMobSize}* ((100vw- 320px) / #{$maxWidth}));
+	}
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+	}
+}
+// @include adaptive-font(40, 25);
+
+
+// bgc colors------------------------------
+$main-bgc-color: #000;
+$secondary-bgc-color: #fff;
+
+
+// about product page colors---------------
+$product-bgc-color: #fff;
+// $product-bgc-color: #000;
+
+// about product page font colors
+$product-primary-f-color:  #000;
+$product-secondary-f-color:  #fff;
+
+// about product page btn color
+$product-btn-bgc-color: #000;
+
+// ui step --------------------------------
+// адекватные дизайнеры задают размеры на основе системы шагов
+$ui-step: 4px;
+
+@mixin ui-space($direction, $size) {
+	@if ($direction == top) {
+		margin-top: $ui-step * $size;
+	}
+
+	@if ($direction == bottom) {
+		margin-bottom: $ui-step * $size;
+	}
+
+	@if ($direction == left) {
+		margin-left: $ui-step * $size;
+	}
+
+	@if ($direction == right) {
+		margin-right: $ui-step * $size;
+	}
+}
+// .element {
+// 	// это отступ в 8 пикселей сверзу
+	// @include ui-space(top, 2);	
+
+// 	// это 40 px (миксин-множитель)
+	// height: $ui-step * 10;
+// }
+
+
+// hover на мобилках --------------------------
+$mouse-device: '(hover: hover) and (pointer: fine)';
+// .button {
+// 	background-color: red;
+
+// 	&:hover {
+// 		@media #{$mouse-device} {
+// 			background: #000;
+// 		}
+// 	}
+// }
+$touch-device: '(hover: none) and (pointer: coarse)';
+
+// breakpoints -----------------------------------------------
+
+/* PC */
+@media (max-width: 1306px) {
+}
+/*
+tablet */
+@media (max-width: 991.98px) {
+}
+/* mobile */
+@media (max-width: 767.98px) {
+}
+/* mobile small*/
+@media (max-width: 565.98px) {
+}
