@@ -1,0 +1,10 @@
+{
+  "name": "crossovka-sass",
+  "version": "1.0.0",
+  "description": "my library for quick start new projects",
+  "main": "index.js",
+  "repository": "https://github.com/crossovka/crossovka-sass",
+  "author": "crossovka",
+  "license": "MIT",
+  "private": false
+}
