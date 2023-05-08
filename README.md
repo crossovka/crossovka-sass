@@ -5,5 +5,10 @@
 
 позже появятся классы, прописывая которые можно быстро задавать стили блокам.
 
+## Установка
 
-его можно подключить к себе в проект прописав в консоли yarn add crossovka-sass  или же npm install crossovka-sass
+NPM:
+`npm install crossovka-sass`
+
+Yarn:
+`yarn add crossovka-sass`
