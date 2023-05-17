@@ -32,9 +32,7 @@ body {
 	color: $primary-f-color;
 
 	background-color: $main-bgc-color;
-	// background-color: #ffffff;
 
-	// для того, чтобы когда модальное окно открывалось у боди не было скрола когда буду вызывать модальное боди буду выдаватьь этот класс
 	&.no-scroll {
 		overflow: hidden;
 	}
@@ -50,5 +48,4 @@ body {
 }
 main {
 	flex: 1 1 auto;
-	// прижал footer у низу
 }

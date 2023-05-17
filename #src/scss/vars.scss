@@ -60,13 +60,19 @@ $mouse-device: '(hover: hover) and (pointer: fine)';
 // 		}
 // 	}
 // }
-$touch-device: '(hover: none) and (pointer: coarse)';
 
+$touch-device: '(hover: none) and (pointer: coarse)';
+// -webkit-tap-highlight-color: transparent;
+
+
+// user-select: none;
+// -webkit-tap-highlight-color: transparent;
+// -webkit-user-drag: none;
 
 
 // ui step -----------------------------------
 // дизайнеры задают размеры на основе системы шагов
-$ui-step: 4px;
+// $ui-step: 4px;
 
 // breakpoints -----------------------------------------------
 // screen sizes ---------------
